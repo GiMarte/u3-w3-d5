@@ -53,7 +53,7 @@ export default function App() {
       {!isMobile && (
         <div className="container-fluid">
           <div className="row">
-            <div className="col col-3 border-end" id="sidebar">
+            <div className="col col-3" id="sidebar">
               <Sidebar onSearchChange={setQuery} />
             </div>
             <div className="col col-9 p-0">
