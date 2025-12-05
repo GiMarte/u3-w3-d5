@@ -1,0 +1,25 @@
+#root {
+  background-color: #1f1f1f;
+  color: white;
+}
+#logo {
+  filter: invert(100%);
+}
+
+.container-fluid {
+  background-color: #2e2e2e;
+}
+nav {
+    height: 80px;
+}
+
+footer {
+  height: 150px;
+  background-color: #2e2e2e;
+}
+
+@media (min-width: 768px) {
+  footer {
+    height: 70px;
+  }
+}
