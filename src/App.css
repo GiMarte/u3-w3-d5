@@ -1,4 +1,5 @@
-#root {
+#root,
+body {
   background-color: #1f1f1f;
   color: white;
 }
@@ -10,10 +11,10 @@
   background-color: #2e2e2e;
 }
 nav {
-    height: 80px;
+  height: 80px;
 }
 
-footer {
+#footer {
   height: 150px;
   background-color: #2e2e2e;
 }
