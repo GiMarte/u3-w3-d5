@@ -1,3 +1,5 @@
+import { Fragment } from "react/jsx-runtime";
+
 type ArrExpType = string;
 
 const arrExp: ArrExpType[] = [
@@ -10,7 +12,7 @@ const arrExp: ArrExpType[] = [
 
 const Footer = () => {
   return (
-    <footer className="p-4" id="footer">
+    <footer className="p-4 mt-5" id="footer">
       <div className="container">
         <div>
           <a href="#" className="text-decoration-none text-white">
@@ -28,15 +30,12 @@ const Footer = () => {
         <div>
           {arrExp.map((item, index) => {
             return (
-              <>
-                <a
-                  className="text-decoration-none text-white"
-                  key={index}
-                  href="#">
+              <Fragment key={index}>
+                <a className="text-decoration-none text-white" href="#">
                   {item}
                 </a>
                 <i> | </i>
-              </>
+              </Fragment>
             );
           })}
         </div>

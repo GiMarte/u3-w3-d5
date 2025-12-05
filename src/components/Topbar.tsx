@@ -9,7 +9,7 @@ const Topbar = ({ onSearchChange }: TopbarProps) => {
   const [showInput, setShowInput] = useState(false);
 
   return (
-    <div className="container-fluid p-0">
+    <div className="container-fluid p-0" id="topbar">
       <div className="container">
         <nav className="d-flex justify-content-between align-items-center ">
           <button

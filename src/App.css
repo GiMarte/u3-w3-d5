@@ -7,9 +7,6 @@ body {
   filter: invert(100%);
 }
 
-.container-fluid {
-  background-color: #2e2e2e;
-}
 nav {
   height: 80px;
 }
@@ -23,4 +20,12 @@ nav {
   footer {
     height: 70px;
   }
+}
+
+#sidebar {
+  background-color: #252526;
+}
+
+#topbar {
+  background-color: #2e2e2e;
 }
