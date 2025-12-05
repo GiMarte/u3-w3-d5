@@ -6,7 +6,7 @@ interface TopbarProps {
 
 const Sidebar = ({ onSearchChange }: TopbarProps) => {
   return (
-    <div className="container">
+    <div className="container ms-3">
       <div className="row">
         <div className="d-flex align-items-center">
           <img src={mela} alt="logo" id="logo" />
@@ -15,19 +15,19 @@ const Sidebar = ({ onSearchChange }: TopbarProps) => {
         <div>
           <input
             type="text"
-            className="form-control w-100 my-4"
+            className="form-control w-75 my-4 bg-transparent"
             placeholder="🔍 Cerca"
             onChange={(e) => onSearchChange(e.target.value)}
           />
-          <p>
+          <p className="fs-3">
             <i className="bi bi-house text-danger"></i> Home
           </p>
-          <p>
+          <p className="fs-3">
             <i className="bi bi-grid text-danger"></i> Novita'
           </p>
-          <p>
+          <p className="fs-3">
             {" "}
-            <i className="bi bi-broadcast text-danger"></i>Home
+            <i className="bi bi-broadcast text-danger"></i> Home
           </p>
         </div>
       </div>

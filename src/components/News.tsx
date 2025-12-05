@@ -10,7 +10,7 @@ const News = () => {
   return (
     <div className="container">
       <div className="row">
-        <h3 className="p-3">Novita'</h3>
+        <h3 className="p-3 fs-1 fw-bold">Novita'</h3>
         <hr />
         <div className="col p-0">
           <div className="card border-0 rounded bg-transparent text-white">

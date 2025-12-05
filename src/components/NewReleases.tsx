@@ -1,7 +1,7 @@
-import { type FC } from "react";
+import { useEffect, useState, type FC } from "react";
 
 interface NewReleasesProps {
-  results: any[]; 
+  results: any[];
 }
 
 const images = import.meta.glob("../assets/images/*.{png,jpg,jpeg,svg}", {
@@ -13,6 +13,13 @@ const imgList = Object.values(images);
 
 const NewReleases: FC<NewReleasesProps> = ({ results }) => {
   const placeholder = imgList[3];
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <div className="container mt-4 ">
@@ -23,7 +30,7 @@ const NewReleases: FC<NewReleasesProps> = ({ results }) => {
           <p className="text-muted">Cerca qualcosa per vedere i risultati...</p>
         )}
 
-        {results.slice(0, 10).map((track) => (
+        {results.slice(0, isMobile ? 9 : 10).map((track) => (
           <div key={track.id} className="col">
             <img
               src={track.album?.cover_medium ?? placeholder}
